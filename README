@@ -1,0 +1,46 @@
+Name: Preethi T
+Company: Codtech IT Solutions Pvt. Ltd
+ID: CT08DS6334
+Domain: Embedded System
+Duration: July to August 2024
+
+TASK-1
+
+LED BLINKING WITH ARDUINO IN WOWKI SIMULATION
+
+In a Wowki simulation, the process of setting up an LED to blink using an Arduino involves several key steps:
+
+1. Setup Environment:
+   - Launch Wowki Simulation: Open Wowki or your chosen simulation tool that supports Arduino.
+   - Create a New Project: Start a new project and select Arduino as the microcontroller.
+
+2. Circuit Design:
+   - Place Arduino Board: Add an Arduino board to the simulation workspace.
+   - Add LED Component: Place an LED in the workspace and connect its anode (longer leg) to one of the digital output pins on the Arduino (e.g., pin 9).
+   - Connect Resistor: Insert a resistor (typically 220Ω or 330Ω) in series with the LED to limit current and prevent damage. Connect the resistor's other end to the ground (GND) on the Arduino.
+
+3. Programming the Arduino:
+   - Write Code: Use the Arduino IDE or a built-in editor in the simulation tool to write the blinking LED code. For example:
+     cpp
+     int ledPin = 9; // Pin where the LED is connected
+
+     void setup() {
+       pinMode(ledPin, OUTPUT); // Set the LED pin as an output
+     }
+
+     void loop() {
+       digitalWrite(ledPin, HIGH); // Turn the LED on
+       delay(500); // Wait for 500 milliseconds
+       digitalWrite(ledPin, LOW); // Turn the LED off
+       delay(500); // Wait for another 500 milliseconds
+     }
+     
+   - Upload Code: In the simulation environment, upload the code to the virtual Arduino.
+
+4. Simulation:
+   - Run Simulation: Start the simulation to see the LED blink on and off every 500 milliseconds. You should observe the LED turning on for 500 ms and then off for 500 ms repeatedly.
+
+5. Verification:
+   - Observe Behavior: Ensure that the LED blinks as expected, confirming the code and circuit are correct.
+
+By following these steps, you can simulate the behavior of a blinking LED using Arduino in Wowki or any similar simulation platform.
