@@ -1,0 +1,27 @@
+DESCRIPTION: 
+This Arduino code blinks an LED connected to pin 9 on and off with a 500-millisecond interval.
+
+1. Variable Definition:
+   - int input = 9; – Defines input as pin 9.
+
+2. Setup Function:
+   - pinMode(input, OUTPUT); – Sets pin 9 as an output.
+
+3. Loop Function:
+   - digitalWrite(input, HIGH); – Turns the LED on by setting pin 9 to high voltage.
+   - delay(500); – Waits for 500 milliseconds.
+   - digitalWrite(input, LOW); – Turns the LED off by setting pin 9 to low voltage.
+   - delay(500); – Waits for another 500 milliseconds.
+
+The LED will blink on and off every second.
+
+CODE:
+int input = 9;
+void setup(){
+pinMode(input, OUTPUT);
+}
+void loop(){
+digitalWrite(input,HIGH);
+delay(500);
+digitalWrite(input,LOW);
+delay(500);
