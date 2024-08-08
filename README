@@ -6,41 +6,71 @@ Duration: July to August 2024
 
 TASK-1
 
-LED BLINKING WITH ARDUINO IN WOWKI SIMULATION
+LED Blinking with Arduino - Wowki Simulation
 
-In a Wowki simulation, the process of setting up an LED to blink using an Arduino involves several key steps:
+This project demonstrates a simple LED blinking program using an Arduino in the Wowki simulation environment. The purpose of this project is to familiarize users with basic Arduino programming and simulation in a virtual environment.
 
-1. Setup Environment:
-   - Launch Wowki Simulation: Open Wowki or your chosen simulation tool that supports Arduino.
-   - Create a New Project: Start a new project and select Arduino as the microcontroller.
+Project Overview
 
-2. Circuit Design:
-   - Place Arduino Board: Add an Arduino board to the simulation workspace.
-   - Add LED Component: Place an LED in the workspace and connect its anode (longer leg) to one of the digital output pins on the Arduino (e.g., pin 9).
-   - Connect Resistor: Insert a resistor (typically 220Ω or 330Ω) in series with the LED to limit current and prevent damage. Connect the resistor's other end to the ground (GND) on the Arduino.
+Objective:
+Create a basic circuit where an LED connected to an Arduino board blinks at regular intervals.
 
-3. Programming the Arduino:
-   - Write Code: Use the Arduino IDE or a built-in editor in the simulation tool to write the blinking LED code. For example:
-     cpp
-     int ledPin = 9; // Pin where the LED is connected
+Components Used:
+- Arduino Uno
+- LED (any color)
+- Resistor (220Ω)
+- Breadboard
+- Jumper wires
 
-     void setup() {
-       pinMode(ledPin, OUTPUT); // Set the LED pin as an output
-     }
+Software:
+- Wowki Simulation Platform
 
-     void loop() {
-       digitalWrite(ledPin, HIGH); // Turn the LED on
-       delay(500); // Wait for 500 milliseconds
-       digitalWrite(ledPin, LOW); // Turn the LED off
-       delay(500); // Wait for another 500 milliseconds
-     }
+ Circuit Diagram
+
+The LED is connected to one of the digital pins on the Arduino (e.g., pin 13), with the cathode (short leg) connected to the ground through a 220Ω resistor. The anode (long leg) of the LED is connected to the digital pin.
+
+ Code Overview
+
+cpp
+// Set the LED pin
+const int ledPin = 13;
+
+void setup() {
+  // Initialize the LED pin as an output
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  // Turn the LED on (HIGH voltage)
+  digitalWrite(ledPin, HIGH);
+  
+  // Wait for a second
+  delay(1000);
+  
+  // Turn the LED off (LOW voltage)
+  digitalWrite(ledPin, LOW);
+  
+  // Wait for a second
+  delay(1000);
+}
+
+ How it Works
+
+1. Setup Phase: The setup() function initializes the LED pin as an output. This setup only runs once when the Arduino is powered on or reset.
+  
+2. Loop Phase: The loop() function repeatedly turns the LED on and off with a 1-second delay between each action, creating a blinking effect.
+
+ Running the Simulation
+
+1. Open Wowki Simulation: Navigate to Wowki and open the Arduino simulation environment.
+2. Build the Circuit: Use the components to create the circuit as described.
+3. Upload the Code: Copy and paste the provided code into the Wowki code editor.
+4. Start the Simulation: Run the simulation to observe the LED blinking.
+
+Conclusion
+
+This project is an introductory exercise to help you get started with Arduino programming. The LED blinking program is a foundational example, and mastering it will give you the confidence to explore more complex projects in the future.
+
+
      
-   - Upload Code: In the simulation environment, upload the code to the virtual Arduino.
-
-4. Simulation:
-   - Run Simulation: Start the simulation to see the LED blink on and off every 500 milliseconds. You should observe the LED turning on for 500 ms and then off for 500 ms repeatedly.
-
-5. Verification:
-   - Observe Behavior: Ensure that the LED blinks as expected, confirming the code and circuit are correct.
-
-By following these steps, you can simulate the behavior of a blinking LED using Arduino in Wowki or any similar simulation platform.
+   
