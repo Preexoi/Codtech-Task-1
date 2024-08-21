@@ -71,6 +71,7 @@ Conclusion
 
 This project is an introductory exercise to help you get started with Arduino programming. The LED blinking program is a foundational example, and mastering it will give you the confidence to explore more complex projects in the future.
 
-
+Output 
+The built-in LED on the Arduino board blinks on and off every second.
      
    
